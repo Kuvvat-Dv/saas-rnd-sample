@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+ {% block head_title %} Home Page - {{block.super}} {% endblock head_title %} 
+
+
+
+{% block content %}
+
+<h1>Home Page</h1>
+<h1>Page count: {{queryset}}</h1>
+{% include 'welcome-to-user.html' %}
+{% endblock content %}
