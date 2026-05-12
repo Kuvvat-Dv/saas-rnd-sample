@@ -5,6 +5,6 @@ from .models import PageVisit
 def homePage(request):
     queryset = PageVisit.objects.all()
     home_html = 'home.html'
-    context = {"queryset":queryset.count()
+    context = {"queryset":queryset.count(),
                "list":"Hello Wen"}
     return render(request, home_html, context)
