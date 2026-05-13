@@ -2,5 +2,6 @@ from django.db import models
 
 # Create your models here.
 class PageVisit(models.Model):
+    image = models.ImageField(upload_to='images', null=True)
     path = models.TextField(blank=True, null=True)
     timestep = models.DateTimeField(auto_now_add=True)

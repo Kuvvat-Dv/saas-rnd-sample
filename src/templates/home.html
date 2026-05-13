@@ -6,10 +6,12 @@
 {% block content %}
 
 <h1>Home Page</h1>
-<h1>
+
     {% for queryset in querysets %}
-        {{queryset.path}} | {{queryset.timestep|timesince}} ago.
+        <h1>{{queryset.path}}</h1>
+        <img src="{{queryset.image.url}}" alt="">
     {% endfor %}
-</h1>
+<br>
+
 {% include 'welcome-to-user.html' %}
 {% endblock content %}
