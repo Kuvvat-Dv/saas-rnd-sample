@@ -6,7 +6,10 @@
 {% block content %}
 
 <h1>Home Page</h1>
-<h1>Page count: {{queryset}}</h1>
+<h1>
+    {% for queryset in querysets %}
+        {{queryset.path}} | {{queryset.timestep|timesince}} ago.
+    {% endfor %}
+</h1>
 {% include 'welcome-to-user.html' %}
-{{list}}
 {% endblock content %}
